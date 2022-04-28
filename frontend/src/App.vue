@@ -5,7 +5,7 @@
       color="primary"
       dark
     >
-      <Header/>
+      <Header class="bar-header"/>
     </v-app-bar>
 
     <router-view>
@@ -29,3 +29,9 @@ export default {
   })
 }
 </script>
+
+<style>
+  .bar-header {
+    margin-bottom: 2%;
+  }
+</style>
