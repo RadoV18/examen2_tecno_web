@@ -7,10 +7,10 @@
         indeterminate
       ></v-progress-linear>
     </template>
-
+    <h2>{{text}}</h2>
     <v-img
       height="250"
-      src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+      :src="imageLink"
     ></v-img>
 
     <v-card-title>Cafe Badilico</v-card-title>

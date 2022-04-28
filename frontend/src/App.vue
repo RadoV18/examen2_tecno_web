@@ -28,7 +28,10 @@ export default {
   })
 }
 </script>
+<<<<<<< HEAD
+=======
 
 <style lang="sass">
 @import "./scss/main.scss"
 </style>
+>>>>>>> d0e5ad33df71ccec8f7330ccebb5cc95c1f1bc6c
