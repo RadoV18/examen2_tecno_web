@@ -11,11 +11,11 @@
         </v-btn>
 
         <v-btn text>
-          <router-link to="/galeria">servicios</router-link>
+          <router-link to="/servicios">servicios</router-link>
         </v-btn>
 
         <v-btn text>
-          <router-link to="/requerimiento">Clasificados</router-link>
+          <router-link to="/clasificados">Clasificados</router-link>
         </v-btn>
 
         <v-btn text>
