@@ -1,12 +1,13 @@
 <template>
   <v-container>
+    <br><br><br>
     Contactos
   </v-container>
 </template>
 
 <script>
 export default {
-  name: 'Contactos',
+  name: 'ContactosView',
 
   data: () => ({})
 }
