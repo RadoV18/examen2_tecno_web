@@ -1,6 +1,13 @@
 <template>
   <v-app>
+<<<<<<< HEAD
     <v-app-bar :class="'background-primary'" app>
+=======
+    <v-app-bar
+    :class="'background-primary'"
+    app
+    >
+>>>>>>> e268a221e93f8dbf6faaa80c36165a1b25c99288
       <Header />
     </v-app-bar>
 
