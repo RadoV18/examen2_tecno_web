@@ -10,6 +10,7 @@
         doloribus, odit ducimus.
       </p>
     </v-row>
+    <br><br><br><br>
     <v-row align="center" justify="space-around">
       <form style="width:600px" method="POST">
         <v-text-field
@@ -50,7 +51,7 @@
         <v-btn @click="clear"> clear </v-btn>
       </form>
     </v-row>
-    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
   </v-container>
 </template>
 
