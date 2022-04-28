@@ -67,6 +67,8 @@
 
 <script>
 export default {
+  name: 'Card'
+
   data: () => ({
     loading: false,
     selection: 1
