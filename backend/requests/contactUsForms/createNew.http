@@ -1,0 +1,10 @@
+POST http://localhost:3001/api/contact-us-forms
+content-type: application/json; charset=utf-8
+
+{
+    "name": "El Bicho CR7",
+    "email": "bichocr7@siuuu.com",
+    "phone": "77755999",
+    "subject": "Asunto",
+    "message": "Ay mi madre el bicho SIUUUUUUUUUUUUUU"
+}

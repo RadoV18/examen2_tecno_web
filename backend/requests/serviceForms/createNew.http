@@ -1,0 +1,10 @@
+POST http://localhost:3001/api/service-forms
+Content-Type: application/json; charset=utf-8
+
+{
+    "companyName": "Google",
+    "email": "google@gmail.com",
+    "date": "2022-05-01",
+    "title": "Title",
+    "description": "Description"
+}
