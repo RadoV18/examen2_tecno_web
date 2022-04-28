@@ -1,0 +1,34 @@
+EXAMEN 2
+TRABAJO COLABORATIVO
+
+HACER UNA APLICACIÓN EN VUE PARA EL PERIÓDICO "LA PAZ". 
+El periódico “La Paz” requiere de un página web dinámica para publicitar noticias de la ciudad: 
+En su primera página llamada “Destacados” el dueño del periódico pide que esta primera página 
+sea llamativa con las noticias destacadas, la segunda página “Servicios”, de oferta de publicaciones 
+con un formulario para las empresas interesadas en publicitar sus productos  o servicios, 
+en esta segunda página se ingresa todos los datos de estos posibles clientes en el formulario 
+una tercera página “Clasificados”, en la que se encuentran los avisos clasificados del periódico 
+en tres áreas definidas “Oferta de Servicios”, “Compra y Venta de Productos” y “Venta de Inmuebles ”.
+y una cuarta de contactos con un formulario de contactos y los datos del periódico.
+
+INSTRUCCIONES
+
+EL PROYECTO DEBE SER REALIZADO POR UN GRUPO DE MÁXIMO 5 ESTUDIANTES
+SE TIENE QUE  USAR EL GIT PARA VER LA PARTICIPACIÓN DE CADA ESTUDIANTE
+(SE RECOMIENDA ASIGNAR UN ESTUDIANTE POR PESTAÑA)
+(SE VALORA EL USO DE BASES DE DATOS -- OPCIONAL)
+
+PRESENTACIÓN
+FECHA DE PRESENTACIÓN 29/04/2022-- HORA DE ENTREGA 12:00 (MEDIA NOCHE)
+
+INFORME CON LO SIGUIENTE: 
+-LOS NOMBRES DE LOS PARTICIPANTES (Y SU PARTICIPACIÓN EN EL PROYECTO)
+-LAS HERRAMIENTAS TECNOLÓGICAS UTILIZADAS
+-UN LINK AL VIDEO DE PRESENTACIÓN DE LA APLICIACIÓN VUE
+-UN LINK AL VIDEO DE EXPLICACIÓN DEL CÓDIGO
+-EL LINK DEL GIT CON EL CÓDIGO DESARROLLADO (PUEDE ESTAR TODO EN EL GIT)
+
+
+
+ 
+
