@@ -1,5 +1,5 @@
 <template>
-  <v-container class="header-container__spaced">
+  <v-container>
     <v-toolbar flat>
       <v-toolbar-title>Periodico La Paz</v-toolbar-title>
 
@@ -11,11 +11,13 @@
         </v-btn>
 
         <v-btn text>
-          <router-link to="/servicios">servicios</router-link>
+          <router-link to="/servicios">Servicios</router-link>
         </v-btn>
 
         <v-btn text>
-          <router-link to="/clasificados">Clasificados</router-link>
+          <router-link to="/clasificados"
+            >Clasificados</router-link
+          >
         </v-btn>
 
         <v-btn text>
@@ -33,7 +35,3 @@ export default {
   data: () => ({})
 }
 </script>
-
-<style scoped>
-
-</style>
