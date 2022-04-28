@@ -29,9 +29,3 @@ export default {
   })
 }
 </script>
-
-<style>
-  .bar-header {
-    margin-bottom: 2%;
-  }
-</style>
