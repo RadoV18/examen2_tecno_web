@@ -67,21 +67,20 @@
 
 <script>
 export default {
-  name: 'Card'
-
+  name: 'CardComponent',
   data: () => ({
     loading: false,
     selection: 1
   }),
-
   methods: {
     reserve () {
-      this.loading = true;
+      this.loading = true
 
-      setTimeout(() => (this.loading = false), 2000);
-    },
-  },
-};
+      setTimeout(() => (this.loading = false), 2000)
+    }
+  }
+
+}
 </script>
 
 <style>

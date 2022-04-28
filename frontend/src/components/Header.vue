@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="header-container__spaced">
     <v-toolbar flat>
       <v-toolbar-title>Periodico La Paz</v-toolbar-title>
 
@@ -33,3 +33,7 @@ export default {
   data: () => ({})
 }
 </script>
+
+<style scoped>
+
+</style>
