@@ -8,6 +8,10 @@
     background: $color-primary !important;
 }
 
+.background-secondary {
+    background: $color-secondary !important;
+}
+
 .text-white {
     color: $color-white !important;
 }
@@ -16,10 +20,18 @@
     color: $color-primary !important;
 }
 
+.text-secondary {
+    color: $color-secondary !important;
+}
+
 .no-decoration {
     text-decoration: none;
 }
 
 .hover-underline:hover {
     text-decoration: underline;
+}
+
+.no-padding {
+    padding: 0;
 }
