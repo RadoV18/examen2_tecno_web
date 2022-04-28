@@ -18,14 +18,6 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
-<<<<<<< HEAD
-    "@vue/eslint-config-standard": "^6.1.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-vue": "^8.0.3",
-=======
->>>>>>> e268a221e93f8dbf6faaa80c36165a1b25c99288
     "sass": "~1.32.0",
     "sass-loader": "^10.0.0",
     "vue-cli-plugin-vuetify": "~2.4.8",
