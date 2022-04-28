@@ -1,0 +1,25 @@
+@import "./colors";
+
+.background-white {
+    background: $color-white !important;
+}
+
+.background-primary {
+    background: $color-primary !important;
+}
+
+.text-white {
+    color: $color-white !important;
+}
+
+.text-primary {
+    color: $color-primary !important;
+}
+
+.no-decoration {
+    text-decoration: none;
+}
+
+.hover-underline:hover {
+    text-decoration: underline;
+}
