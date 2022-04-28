@@ -2,7 +2,9 @@
   <v-container >
     <v-toolbar class="background-primary" flat>
       <v-toolbar-title class="text-white">
-        <router-link class="text-white no-decoration" to="/">Periódico La Paz</router-link>
+        <router-link class="text-white no-decoration header__title" to="/">
+          <img class="header__image" :src="require('@/assets/img/illimani.png')" alt="illimani"/><span>Periódico "La Paz"</span>
+        </router-link>
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
@@ -34,3 +36,19 @@ export default {
   data: () => ({})
 }
 </script>
+
+<style scoped>
+.header__image {
+  height: 64px;
+}
+
+.header__title {
+  display: flex;
+}
+
+.header__title span {
+  margin-left: 1rem;
+  line-height: 64px;
+  vertical-align: middle
+}
+</style>
