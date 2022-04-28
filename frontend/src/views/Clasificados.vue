@@ -1,12 +1,18 @@
 <template>
     <v-container>
         <div class="card-container">
-            <card imageLink="https://remax.azureedge.net/userimages/120/L_9c6cecfddfb44d729b81aa46e92595f7.jpg"
-                text="Hola MUNDO"
-            />
-            <card />
-            <card />
-            <card />
+            <card imageLink="img1.jpg"  text="Casa Uno"/>
+            <card imageLink="img2.jpg"  text="Casa Dos"/>
+            <card imageLink="img3.jpg"  text="Casa Tres"/>
+            <card imageLink="img4.jpg"  text="Casa Cuatro"/>
+
+
+
+            <card imageLink="https://remax.azureedge.net/userimages/120/L_c62cefe031de4d3aa2d23259ee6ba152.jpg"/>
+            <card imageLink="https://remax.azureedge.net/userimages/120/L_c62cefe031de4d3aa2d23259ee6ba152.jpg"/>
+            <card imageLink="https://remax.azureedge.net/userimages/120/L_dab8aefa7a3d4770a8ce70d912dc1040.jpg"/>
+  
+
         </div>
 
     </v-container>
@@ -19,10 +25,7 @@ export default {
   components: {
     Card
   },
-  props: {
-    imageLink: String,
-    text: String
-  },
+
   data: () => ({})
 }
 

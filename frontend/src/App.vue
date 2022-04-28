@@ -4,7 +4,7 @@
     :class="'background-primary'"
     app
     >
-      <Header/>
+      <Header />
     </v-app-bar>
 
     <router-view>
