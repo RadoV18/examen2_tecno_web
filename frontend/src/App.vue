@@ -1,9 +1,10 @@
 <template>
   <v-app>
     <v-app-bar
+    :class="'background-primary'"
     app
     >
-      <Header class="bar-header"/>
+      <Header />
     </v-app-bar>
 
     <router-view>
@@ -28,8 +29,6 @@ export default {
 }
 </script>
 
-<style>
-  .bar-header {
-    margin-bottom: 2%;
-  }
+<style lang="sass">
+@import "./scss/main.scss"
 </style>
