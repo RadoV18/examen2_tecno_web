@@ -6,7 +6,7 @@
 
     <router-view> </router-view>
 
-    <v-footer>
+    <v-footer class="no-padding background-secondary">
       <Footer />
     </v-footer>
   </v-app>
