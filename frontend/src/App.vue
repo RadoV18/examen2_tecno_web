@@ -1,30 +1,27 @@
 <template>
   <v-app>
-    <v-app-bar
-    :class="'background-primary'"
-    app
-    >
-<<<<<<< HEAD
+    <v-app-bar :class="'background-primary'" app>
       <Header />
-=======
-      <Header/>
->>>>>>> 4ff04b97406c0ea37fb76639b6b5f39e0e6e2d29
     </v-app-bar>
 
-    <router-view>
+    <router-view> </router-view>
 
-    </router-view>
+    <v-footer>
+      <Footer />
+    </v-footer>
   </v-app>
 </template>
 
 <script>
 import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
 
   components: {
-    Header
+    Header,
+    Footer
   },
 
   data: () => ({
@@ -33,6 +30,6 @@ export default {
 }
 </script>
 
-<style lang="sass">
-@import "./scss/main.scss"
+<style lang='sass'>
+@import './scss/main.scss'
 </style>
