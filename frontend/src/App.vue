@@ -1,9 +1,7 @@
 <template>
   <v-app>
     <v-app-bar
-      app
-      color="primary"
-      dark
+    app
     >
       <Header class="bar-header"/>
     </v-app-bar>
