@@ -7,10 +7,12 @@
         indeterminate
       ></v-progress-linear>
     </template>
-    <h2>{{text}}</h2>
+    <div class="flex-container">
+     <h2>{{text}}</h2>
+    </div>
     <v-img
       height="250"
-      :src="imageLink"
+      :src="require(`@/assets/img/${imageLink}`)"
     ></v-img>
 
     <v-card-title>Cafe Badilico</v-card-title>
@@ -72,6 +74,10 @@ export default {
     loading: false,
     selection: 1
   }),
+  props: {
+    imageLink: String,
+    text: String,
+  },
   methods: {
     reserve () {
       this.loading = true
@@ -84,4 +90,12 @@ export default {
 </script>
 
 <style>
+  .flex-container {
+    display: flex;
+    margin: 0 auto;
+  }
+  .flex-container h2 {
+    margin: 0 auto;
+
+  }
 </style>

@@ -1,15 +1,12 @@
 <template>
   <v-app>
-    <v-app-bar
-    :class="'background-primary'"
-    app
-    >
+    <v-app-bar :class="'background-primary'" app>
       <Header />
     </v-app-bar>
 
     <router-view> </router-view>
 
-    <v-footer>
+    <v-footer class="no-padding background-secondary">
       <Footer />
     </v-footer>
   </v-app>
