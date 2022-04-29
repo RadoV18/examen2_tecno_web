@@ -25,26 +25,26 @@
         <v-text-field
           v-model="email"
           :error-messages="emailErrors"
-          label="E-mail"
+          label="Correo"
           required
           @input="$v.email.$touch()"
           @blur="$v.email.$touch()"
         ></v-text-field>
         <v-text-field
           v-model="titulo"
-          label="titulo"
+          label="Título"
           required
           @input="$v.titulo.$touch()"
           @blur="$v.titulo.$touch()"
         ></v-text-field>
         <v-text-field
           v-model="descripcion"
-          label="descripcion"
+          label="Descripción"
           required
           @input="$v.descripcion.$touch()"
           @blur="$v.descripcion.$touch()"
         ></v-text-field>
-        <v-select
+        <!-- <v-select
           v-model="select"
           :items="items"
           :error-messages="selectErrors"
@@ -52,7 +52,7 @@
           required
           @change="$v.select.$touch()"
           @blur="$v.select.$touch()"
-        ></v-select>
+        ></v-select> -->
         <v-btn class="mr-4" @click="submit"> submit </v-btn>
         <v-btn @click="clear"> clear </v-btn>
       </form>
@@ -76,11 +76,11 @@ export default {
     name: { required, maxLength: maxLength(10) },
     email: { required, email },
     select: { required },
-    checkbox: {
-      checked(val) {
-        return val;
-      },
-    },
+    // checkbox: {
+    //   checked(val) {
+    //     return val;
+    //   },
+    // },
   },
 
   data: () => ({
@@ -89,7 +89,7 @@ export default {
     descripcion: "",
     titulo: "",
     select: null,
-    items: ["Opcion 1", "Opcion 2", "Opcion 3", "Opcion 4"],
+    // items: ["Opcion 1", "Opcion 2", "Opcion 3", "Opcion 4"],
   }),
   computed: {
     selectErrors() {
@@ -140,7 +140,7 @@ export default {
       this.email = "";
       this.titulo = "";
       this.descripcion = "";
-      this.select = null;
+      // this.select = null;
     },
   },
 };
