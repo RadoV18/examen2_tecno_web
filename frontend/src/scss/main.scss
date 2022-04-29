@@ -25,7 +25,7 @@
     text-align: center;
 }
 
-.centermid{
+.centermid {
     justify-content: center;
 }
 
@@ -57,4 +57,46 @@
 
 .no-padding {
     padding: 0;
+}
+
+.category__container {
+    width: 20%;
+}
+
+.card-container {
+    flex-grow: 2;
+}
+
+.filters__button {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.filters__element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 4rem;
+}
+
+.filters__element span {
+    line-height: 4rem;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.filters__element--active {
+    background: $color-primary;
+    color: $color-white;
+}
+
+.filters__element:hover {
+    background: $color-secondary;
+    color: $color-white;
+    cursor: pointer;
+}
+
+.filters__element--active:hover {
+    background: $color-primary;
+    color: $color-white;
 }

@@ -52,35 +52,4 @@ export default {
 </script>
 
 <style>
-.category__container {
-  width: 20%;
-}
-.filters__button {
-  text-align: center;
-  padding: 2rem 0;
-}
-.filters__element {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 4rem;
-}
-.filters__element span {
-  line-height: 4rem;
-  vertical-align: middle;
-  text-align: center;
-}
-.filters__element--active {
-  background: #3fb984;
-  color: #001e26;
-}
-.filters__element:hover {
-  background: #30475e;
-  color: white;
-  cursor: pointer;
-}
-.filters__element--active:hover {
-  background: #3fb984;
-  color: #001e26;
-}
 </style>

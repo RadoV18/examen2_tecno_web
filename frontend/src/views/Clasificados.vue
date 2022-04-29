@@ -1,7 +1,7 @@
 <template>
     <v-row>
         <card-filter :category="this.selectedCategory" @update-category="selectedOption" />
-            <div class="card-container">
+        <div class="card-container">
             <card v-for="item in displayImages" :key="item.id" :id="item.id" :imageLink="item.src" :text="item.txt" :desc="item.descripcion" />
         </div>
     </v-row>
@@ -123,5 +123,4 @@ export default {
         grid-template-columns: repeat(2, 1fr);
         margin-top: 5%;
     }
-
 </style>
