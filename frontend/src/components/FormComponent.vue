@@ -41,14 +41,13 @@ script<template>
           <v-textarea 
             ref="message"
             v-model="message" 
-            :rules="[() => !!Mensaje || 'Campo Obligatorio']"
+            :rules="[() => !!message || 'Campo Obligatorio']"
             label="Mensaje"
             required
             placeholder="Mensaje de la solicitud"
             >
           </v-textarea>
         </v-card-text>
-        <v-divider class="mt-12"></v-divider>
         <v-card-actions>
           <v-btn text> Cancel </v-btn>
           <v-spacer></v-spacer>
