@@ -39,8 +39,8 @@ script<template>
             placeholder="Asunto de la solicitud"
           ></v-text-field>
           <v-textarea 
-            ref="Mensaje"
-            v-model="Mensaje" 
+            ref="message"
+            v-model="message" 
             :rules="[() => !!Mensaje || 'Campo Obligatorio']"
             label="Mensaje"
             required
@@ -80,11 +80,10 @@ export default {
   data: () => ({
     errorMessages: "",
     name: null,
-    address: null,
-    city: null,
-    state: null,
-    zip: null,
-    country: null,
+    email: null,
+    phone: null,
+    subject: null,
+    message: null,
     formHasErrors: false,
   }),
 
@@ -92,11 +91,10 @@ export default {
     form() {
       return {
         name: this.name,
-        address: this.address,
-        city: this.city,
-        state: this.state,
-        zip: this.zip,
-        country: this.country,
+        email: this.email,
+        phone: this.phone,
+        subject: this.subject,
+        message: this.message,
       };
     },
   },
@@ -108,12 +106,6 @@ export default {
   },
 
   methods: {
-    addressCheck() {
-      this.errorMessages =
-        this.address && !this.name ? `Hey! I'm required` : "";
-
-      return true;
-    },
     resetForm() {
       this.errorMessages = [];
       this.formHasErrors = false;
