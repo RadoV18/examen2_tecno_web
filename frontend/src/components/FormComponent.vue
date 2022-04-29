@@ -6,45 +6,40 @@ script<template>
           <v-text-field
             ref="name"
             v-model="name"
-            :rules="[() => !!name || 'Campo obligatorio']"
+            :rules="[() => !!name || 'Campo Obligatorio.']"
             :error-messages="errorMessages"
-            label="Nombre Completo"
-            placeholder="Ignacio Agramont"
+            label="Nombre Completo:"
             required
           ></v-text-field>
           <v-text-field
             ref="email"
             v-model="email"
             :rules="[
-              () => !!email || 'Campo obligatorio',
+              () => !!email || 'Campo Obligatorio.',
             ]"
-            label="Email"
-            placeholder="email@email.com"
+            label="Correo Electrónico:"
             required
           ></v-text-field>
           <v-text-field
             ref="phone"
             v-model="phone"
-            :rules="[() => !!phone || 'Campo Obligatorio']"
-            label="Celular"
+            :rules="[() => !!phone || 'Campo Obligatorio.']"
+            label="Celular:"
             required
-            placeholder="77788899"
           ></v-text-field>
           <v-text-field
             ref="subject"
             v-model="subject"
-            :rules="[() => !!subject || 'Campo Obligatorio']"
-            label="Asunto"
+            :rules="[() => !!subject || 'Campo Obligatorio.']"
+            label="Asunto:"
             required
-            placeholder="Asunto de la solicitud"
           ></v-text-field>
           <v-textarea 
             ref="message"
             v-model="message" 
-            :rules="[() => !!message || 'Campo Obligatorio']"
-            label="Mensaje"
+            :rules="[() => !!message || 'Campo Obligatorio.']"
+            label="Mensaje:"
             required
-            placeholder="Mensaje de la solicitud"
             >
           </v-textarea>
         </v-card-text>
