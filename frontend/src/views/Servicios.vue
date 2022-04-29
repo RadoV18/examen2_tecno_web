@@ -34,11 +34,15 @@
           v-model="titulo"
           label="titulo"
           required
+          @input="$v.titulo.$touch()"
+          @blur="$v.titulo.$touch()"
         ></v-text-field>
         <v-text-field
           v-model="descripcion"
           label="descripcion"
           required
+          @input="$v.descripcion.$touch()"
+          @blur="$v.descripcion.$touch()"
         ></v-text-field>
         <v-select
           v-model="select"
@@ -134,6 +138,8 @@ export default {
       this.$v.$reset();
       this.name = "";
       this.email = "";
+      this.titulo = "";
+      this.descripcion = "";
       this.select = null;
     },
   },
