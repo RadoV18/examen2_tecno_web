@@ -31,12 +31,18 @@
           @blur="$v.email.$touch()"
         ></v-text-field>
         <v-text-field
+          v-model="titulo"
           label="titulo"
           required
+          @input="$v.titulo.$touch()"
+          @blur="$v.titulo.$touch()"
         ></v-text-field>
         <v-text-field
+          v-model="descripcion"
           label="descripcion"
           required
+          @input="$v.descripcion.$touch()"
+          @blur="$v.descripcion.$touch()"
         ></v-text-field>
         <v-select
           v-model="select"
@@ -59,6 +65,8 @@
 import { validationMixin } from "vuelidate";
 import { required, maxLength, email } from "vuelidate/lib/validators";
 
+import axios from 'axios';
+
 export default {
   name: "ServiciosPeriodico",
 
@@ -78,6 +86,8 @@ export default {
   data: () => ({
     name: "",
     email: "",
+    descripcion: "",
+    titulo: "",
     select: null,
     items: ["Opcion 1", "Opcion 2", "Opcion 3", "Opcion 4"],
   }),
@@ -108,11 +118,28 @@ export default {
   methods: {
     submit() {
       this.$v.$touch();
+      let postData = {
+        name: this.$v.name.$model,
+        email: this.$v.email.$model,
+        title: this.titulo,
+        description: this.descripcion,
+      };
+      axios.post('http://localhost:3001/api/service-forms', postData)
+        .then(res => {
+          if(res.status === 201) {
+            // alert
+          }
+        })
+        .catch(err => {
+          // alert
+        });
     },
     clear() {
       this.$v.$reset();
       this.name = "";
       this.email = "";
+      this.titulo = "";
+      this.descripcion = "";
       this.select = null;
     },
   },

@@ -12,7 +12,7 @@ serviceFormsRouter.post('/', async (req, res) => {
     const newServiceForm = new ServiceForm({
         companyName: data.companyName,
         email: data.email,
-        date: data.date,
+        date: new Date(),
         title: data.title,
         description: data.description
     });

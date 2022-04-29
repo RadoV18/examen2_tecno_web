@@ -41,6 +41,16 @@
     text-decoration: none;
 }
 
+.stroke-white {
+    stroke: white !important;
+    stroke-width: 5 !important;
+}
+
+.stroke-black {
+    stroke: black !important;
+    stroke-width: 5 !important;
+}
+
 .hover-underline:hover {
     text-decoration: underline;
 }
