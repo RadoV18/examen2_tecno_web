@@ -75,6 +75,7 @@ script<template>
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   data: () => ({
     errorMessages: "",
@@ -118,9 +119,27 @@ export default {
 
       Object.keys(this.form).forEach((f) => {
         if (!this.form[f]) this.formHasErrors = true;
-
         this.$refs[f].validate(true);
       });
+      if(!this.formHasErrors) {
+        let postData = {
+          name: this.name,
+          email: this.email,
+          phone: this.phone,
+          subject: this.subject,
+          message: this.message
+        };
+        console.log(postData);
+        axios.post('http://localhost:3001/api/contact-us-forms', postData)
+          .then(res => {
+            if(res.status === 201) {
+              // mostrar alert
+            }
+          })
+          .catch(err => {
+            console.log(err);
+          });
+      }
     },
   },
 };
