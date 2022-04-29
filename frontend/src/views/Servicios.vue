@@ -61,6 +61,8 @@
 import { validationMixin } from "vuelidate";
 import { required, maxLength, email } from "vuelidate/lib/validators";
 
+import axios from 'axios';
+
 export default {
   name: "ServiciosPeriodico",
 
@@ -80,6 +82,8 @@ export default {
   data: () => ({
     name: "",
     email: "",
+    descripcion: "",
+    titulo: "",
     select: null,
     items: ["Opcion 1", "Opcion 2", "Opcion 3", "Opcion 4"],
   }),
@@ -110,6 +114,21 @@ export default {
   methods: {
     submit() {
       this.$v.$touch();
+      let postData = {
+        name: this.$v.name.$model,
+        email: this.$v.email.$model,
+        title: this.titulo,
+        description: this.descripcion,
+      };
+      axios.post('http://localhost:3001/api/service-forms', postData)
+        .then(res => {
+          if(res.status === 201) {
+            // alert
+          }
+        })
+        .catch(err => {
+          // alert
+        });
     },
     clear() {
       this.$v.$reset();
