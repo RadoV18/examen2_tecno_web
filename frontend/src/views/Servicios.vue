@@ -25,20 +25,26 @@
         <v-text-field
           v-model="email"
           :error-messages="emailErrors"
-          label="E-mail"
+          label="Correo"
           required
           @input="$v.email.$touch()"
           @blur="$v.email.$touch()"
         ></v-text-field>
         <v-text-field
-          label="titulo"
+          v-model="titulo"
+          label="Título"
           required
+          @input="$v.titulo.$touch()"
+          @blur="$v.titulo.$touch()"
         ></v-text-field>
         <v-text-field
-          label="descripcion"
+          v-model="descripcion"
+          label="Descripción"
           required
+          @input="$v.descripcion.$touch()"
+          @blur="$v.descripcion.$touch()"
         ></v-text-field>
-        <v-select
+        <!-- <v-select
           v-model="select"
           :items="items"
           :error-messages="selectErrors"
@@ -46,7 +52,7 @@
           required
           @change="$v.select.$touch()"
           @blur="$v.select.$touch()"
-        ></v-select>
+        ></v-select> -->
         <v-btn class="mr-4" @click="submit"> submit </v-btn>
         <v-btn @click="clear"> clear </v-btn>
       </form>
@@ -59,6 +65,8 @@
 import { validationMixin } from "vuelidate";
 import { required, maxLength, email } from "vuelidate/lib/validators";
 
+import axios from 'axios';
+
 export default {
   name: "ServiciosPeriodico",
 
@@ -68,18 +76,20 @@ export default {
     name: { required, maxLength: maxLength(10) },
     email: { required, email },
     select: { required },
-    checkbox: {
-      checked(val) {
-        return val;
-      },
-    },
+    // checkbox: {
+    //   checked(val) {
+    //     return val;
+    //   },
+    // },
   },
 
   data: () => ({
     name: "",
     email: "",
+    descripcion: "",
+    titulo: "",
     select: null,
-    items: ["Opcion 1", "Opcion 2", "Opcion 3", "Opcion 4"],
+    // items: ["Opcion 1", "Opcion 2", "Opcion 3", "Opcion 4"],
   }),
   computed: {
     selectErrors() {
@@ -108,12 +118,29 @@ export default {
   methods: {
     submit() {
       this.$v.$touch();
+      let postData = {
+        name: this.$v.name.$model,
+        email: this.$v.email.$model,
+        title: this.titulo,
+        description: this.descripcion,
+      };
+      axios.post('http://localhost:3001/api/service-forms', postData)
+        .then(res => {
+          if(res.status === 201) {
+            // alert
+          }
+        })
+        .catch(err => {
+          // alert
+        });
     },
     clear() {
       this.$v.$reset();
       this.name = "";
       this.email = "";
-      this.select = null;
+      this.titulo = "";
+      this.descripcion = "";
+      // this.select = null;
     },
   },
 };

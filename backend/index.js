@@ -2,6 +2,7 @@ const config = require('./utils/config');
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const cors = require('cors');
 // router
 const serviceFormsRouter = require('./controllers/serviceForms');
 const contactUsFormsRouter = require('./controllers/contactUsForms');
@@ -18,6 +19,7 @@ mongoose.connect(mongooseURI)
     });
 
 app.use(morgan('tiny'));
+app.use(cors());
 app.use(express.json());
 
 // routes

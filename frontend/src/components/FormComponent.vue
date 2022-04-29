@@ -1,4 +1,4 @@
-script<template>
+<template>
   <v-row justify="center">
     <v-col cols="12" sm="10" md="8" lg="6">
       <v-card ref="form">
@@ -6,49 +6,43 @@ script<template>
           <v-text-field
             ref="name"
             v-model="name"
-            :rules="[() => !!name || 'Campo obligatorio']"
+            :rules="[() => !!name || 'Campo Obligatorio.']"
             :error-messages="errorMessages"
-            label="Nombre Completo"
-            placeholder="Ignacio Agramont"
+            label="Nombre Completo:"
             required
           ></v-text-field>
           <v-text-field
             ref="email"
             v-model="email"
             :rules="[
-              () => !!email || 'Campo obligatorio',
+              () => !!email || 'Campo Obligatorio.',
             ]"
-            label="Email"
-            placeholder="email@email.com"
+            label="Correo Electrónico:"
             required
           ></v-text-field>
           <v-text-field
             ref="phone"
             v-model="phone"
-            :rules="[() => !!phone || 'Campo Obligatorio']"
-            label="Celular"
+            :rules="[() => !!phone || 'Campo Obligatorio.']"
+            label="Celular:"
             required
-            placeholder="77788899"
           ></v-text-field>
           <v-text-field
             ref="subject"
             v-model="subject"
-            :rules="[() => !!subject || 'Campo Obligatorio']"
-            label="Asunto"
+            :rules="[() => !!subject || 'Campo Obligatorio.']"
+            label="Asunto:"
             required
-            placeholder="Asunto de la solicitud"
           ></v-text-field>
           <v-textarea 
             ref="message"
             v-model="message" 
-            :rules="[() => !!Mensaje || 'Campo Obligatorio']"
-            label="Mensaje"
+            :rules="[() => !!message || 'Campo Obligatorio.']"
+            label="Mensaje:"
             required
-            placeholder="Mensaje de la solicitud"
             >
           </v-textarea>
         </v-card-text>
-        <v-divider class="mt-12"></v-divider>
         <v-card-actions>
           <v-btn text> Cancel </v-btn>
           <v-spacer></v-spacer>
@@ -76,6 +70,7 @@ script<template>
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   data: () => ({
     errorMessages: "",
@@ -119,9 +114,27 @@ export default {
 
       Object.keys(this.form).forEach((f) => {
         if (!this.form[f]) this.formHasErrors = true;
-
         this.$refs[f].validate(true);
       });
+      if(!this.formHasErrors) {
+        let postData = {
+          name: this.name,
+          email: this.email,
+          phone: this.phone,
+          subject: this.subject,
+          message: this.message
+        };
+        console.log(postData);
+        axios.post('http://localhost:3001/api/contact-us-forms', postData)
+          .then(res => {
+            if(res.status === 201) {
+              // mostrar alert
+            }
+          })
+          .catch(err => {
+            console.log(err);
+          });
+      }
     },
   },
 };
