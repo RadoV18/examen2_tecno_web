@@ -1,7 +1,7 @@
 <template>
   <v-card class="background-primary mx-auto" dark max-width="400">
     <v-card-title>
-      <span class="text-h6 font-weight-light">Editor en Jefe</span>
+      <span class="text-h6 font-weight-light stroke-black">Editor en Jefe</span>
     </v-card-title>
 
     <v-card-text class="text-h5 font-weight-bold">

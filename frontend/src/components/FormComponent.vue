@@ -1,4 +1,4 @@
-script<template>
+<template>
   <v-row justify="center">
     <v-col cols="12" sm="10" md="8" lg="6">
       <v-card ref="form">

@@ -16,6 +16,19 @@
     color: $color-white !important;
 }
 
+.text-black {
+    color: $color-black !important;
+    font-weight: bold !important;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.centermid{
+    justify-content: center;
+}
+
 .text-primary {
     color: $color-primary !important;
 }
@@ -26,6 +39,16 @@
 
 .no-decoration {
     text-decoration: none;
+}
+
+.stroke-white {
+    stroke: white !important;
+    stroke-width: 5 !important;
+}
+
+.stroke-black {
+    stroke: black !important;
+    stroke-width: 5 !important;
 }
 
 .hover-underline:hover {
