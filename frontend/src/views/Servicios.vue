@@ -31,10 +31,12 @@
           @blur="$v.email.$touch()"
         ></v-text-field>
         <v-text-field
+          v-model="titulo"
           label="titulo"
           required
         ></v-text-field>
         <v-text-field
+          v-model="descripcion"
           label="descripcion"
           required
         ></v-text-field>
