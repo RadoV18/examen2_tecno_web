@@ -1,18 +1,7 @@
 <template>
     <v-container>
         <div class="card-container">
-            <card imageLink="img1.jpg"  text="Casa Uno"/>
-            <card imageLink="img2.jpg"  text="Casa Dos"/>
-            <card imageLink="img3.jpg"  text="Casa Tres"/>
-            <card imageLink="img4.jpg"  text="Casa Cuatro"/>
-
-
-
-            <card imageLink="https://remax.azureedge.net/userimages/120/L_c62cefe031de4d3aa2d23259ee6ba152.jpg"/>
-            <card imageLink="https://remax.azureedge.net/userimages/120/L_c62cefe031de4d3aa2d23259ee6ba152.jpg"/>
-            <card imageLink="https://remax.azureedge.net/userimages/120/L_dab8aefa7a3d4770a8ce70d912dc1040.jpg"/>
-  
-
+            <card v-for="item in displayImages" :key="item.id" :id="item.id" :imageLink="item.src" :text="item.txt" :desc="item.descripcion" />
         </div>
 
     </v-container>
@@ -25,8 +14,101 @@ export default {
   components: {
     Card
   },
+  methods: {
+      selectedOption(cat){
+          this.selectedOption = cat;
+      }
+  },
+  computed: {
+      displayImages: function(){
+          return this.imgArray.filter(( img ) => img.category.includes(this.selectedCategory));
+      }
+  },
+  data () {
+      return {
+          selectedCategory: 'all',
+          imgArray: [
+              {
+                  id:'1',
+                  src:'img1.jpg',
+                  txt:'Casa Uno',
+                  descripcion: 'Se vende el inmueble más grandioso de toda la vida, contamos con la mejor ubicación del mundo entero. ',
+                  category: ['all', 'inmueble']  
+              },
+              {
+                  id:'2',
+                  src:'img2.jpg',
+                  txt:'Casa Dos',
+                  descripcion: 'Se vende el inmueble más grandioso de toda la vida, contamos con la mejor ubicación del mundo entero. ',
+                  category: ['all', 'inmueble']  
+              },
+              {
+                  id:'3',
+                  src:'img3.jpg',
+                  txt:'Casa Tres',
+                  descripcion: 'Se vende el inmueble más grandioso de toda la vida, contamos con la mejor ubicación del mundo entero. ',
+                  category: ['all', 'inmueble']  
+              },
+              {
+                  id:'4',
+                  src:'img4.jpg',
+                  txt:'Casa Cuatros',
+                  descripcion: 'Se vende el inmueble más grandioso de toda la vida, contamos con la mejor ubicación del mundo entero. ',
+                  category: ['all', 'inmueble']  
+              },
+              {
+                  id:'5',
+                  src:'rocola1.jpg',
+                  txt:'Objeto Uno',
+                  descripcion:'Vendemos los mejores productos al mejor precio, econonmicos, modernos y totalmente buenos',
+                  category: ['all', 'productos']  
+              },   
+              {
+                  id:'6',
+                  src:'cel1.jpg',
+                  txt:'Objeto Dos',
+                  descripcion:'Vendemos los mejores productos al mejor precio, econonmicos, modernos y totalmente buenos',
+                  category: ['all', 'productos']  
+              }, 
+              {
+                  id:'7',
+                  src:'ropa1.jpg',
+                  txt:'Objeto Tres',
+                  descripcion:'Vendemos los mejores productos al mejor precio, econonmicos, modernos y totalmente buenos',
+                  category: ['all', 'productos']  
+              },  
+              {
+                  id:'8',
+                  src:'disco1.jpg',
+                  txt:'Objeto Cuatro',
+                  descripcion:'Vendemos los mejores productos al mejor precio, econonmicos, modernos y totalmente buenos',
+                  category: ['all', 'productos']  
+              },   
+              {
+                  id:'9',
+                  src:'limpieza.jpg',
+                  txt:'Servicio Cuatro',
+                  descripcion:'Ofrecemos los mejores servicios a los mejores precios dentro de la economia boliviana dentro de todos',
+                  category: ['all', 'servicios']  
+              }, 
+              {
+                  id:'10',
+                  src:'profesor.jpg',
+                  txt:'Servicio Cuatro',
+                  descripcion:'Ofrecemos los mejores servicios a los mejores precios dentro de la economia boliviana dentro de todos',
+                  category: ['all', 'servicios']  
+              },
+              {
+                  id:'11',
+                  src:'carpinteria.jpg',
+                  txt:'Servicio Cuatro',
+                  descripcion:'Ofrecemos los mejores servicios a los mejores precios dentro de la economia boliviana dentro de todos',
+                  category: ['all', 'servicios']  
+              },                            
 
-  data: () => ({})
+          ]
+      }
+  }
 }
 
 </script>
