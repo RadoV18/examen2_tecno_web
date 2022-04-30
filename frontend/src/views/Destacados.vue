@@ -1,37 +1,39 @@
 <template>
   <div class="app">
       <div align="center" justify="space-around">
-        <h1>Destacados de hoy</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est nemo ipsa
-            recusandae officia, et eaque obcaecati reprehenderit rem. Molestiae
-            consequatur magnam recusandae molestias nam magni quas explicabo
-            doloribus, odit ducimus.
-          </p>
+        <h1>Destacados de Hoy</h1>
+        <h3>
+          Bienvenido al Periódico "La Paz".
+        </h3>
+        <h4>
+          Somos la mejor fuente de noticias de Bolivia.
+        </h4>
       </div>
       <carousel>
         <carousel-slide v-for="slide in slides" :key="slide" class="carousel-slider">
           <img :src="slide" :alt="slide">
         </carousel-slide>
       </carousel>
-      <div align="center" justify="space-around">
+      <div align="center" justify="space-around" width="100%">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est nemo ipsa
-            recusandae officia, et eaque obcaecati reprehenderit rem. Molestiae
-            consequatur magnam recusandae molestias nam magni quas explicabo
-            doloribus, odit ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est nemo ipsa
-            recusandae officia, et eaque obcaecati reprehenderit rem. Molestiae
-            consequatur magnam recusandae molestias nam magni quas explicabo
-            doloribus, odit ducimus.
+            El Periodico "La Paz" es un medio de comunicación digital boliviano de
+        ámbito nacional e internacional y temática generalista, nacido en
+        noviembre de 2003 por iniciativa de su actual director.
+            "Periódicos La Paz se caracteriza por su labor con la sociedad al ser un
+      medio plural y una fuente confiable para la sociedad paceña."
           </p>
+          <div class="card background-primary">
+            <card imageLink="img13.jpg" text="Nacional" cardContent="En el MAS apuntan al 'a la democrática' opositora para elegir al Defensor, necesita 14 votos"/>
+            <card imageLink="img14.jpg" text="Economía" cardContent="El Gobierno anuncia la reversión de tierras de Marinkovic y otros empresarios"/>
+            <card imageLink="img15.jpg" text="Economía" cardContent="Empresarios calculan en $us 216 millones el efecto del aumento del salario mínimo de 4%"/>
+          </div>
           <div class="card">
-            <card imageLink="img10.jpg"  text="Noticia fotografia"/>
-            <card imageLink="img11.jpg"  text="Noticia musical"/>
-            <card imageLink="img12.jpg"  text="Noticia marchas LGBT+"/>
-
-            <card imageLink="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/USAF_photographer.jpg/1200px-USAF_photographer.jpg"/>
-            <card imageLink="https://img2.rtve.es/imagenes/duki/1622195490606.jpg"/>
-            <card imageLink="https://th.bing.com/th/id/R.279c91748973055eb856d5d3244141bb?rik=iUuC3v8XnpXgoQ&pid=ImgRaw&r=0"/>
+            <info/><media/>
+          </div>
+          <div class="card">
+            <card imageLink="img10.jpg" text="Cultura" cardContent=""/>
+            <card imageLink="img11.jpg" text="Música" cardContent=""/>
+            <card imageLink="img12.jpg" text="Nacional" cardContent=""/>
           </div>
       </div>
   </div>
@@ -42,6 +44,8 @@ import Header from '../components/Header.vue'
 import Carousel from '../components/carousel/Carousel'
 import CarouselSlide from '../components/carousel/CarouselSlide'
 import Card from '../components/CardNoticia.vue'
+import Info from '../components/InfoComponent.vue'
+import Media from '../components/MediaComponent.vue'
 
 export default {
   name: 'DestacadosNoticias',
@@ -49,10 +53,11 @@ export default {
   data() {
     return {
       slides: [
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/USAF_photographer.jpg/1200px-USAF_photographer.jpg',
-        'https://img2.rtve.es/imagenes/duki/1622195490606.jpg',
-        'https://th.bing.com/th/id/R.279c91748973055eb856d5d3244141bb?rik=iUuC3v8XnpXgoQ&pid=ImgRaw&r=0',
+        'https://www.la-razon.com/wp-content/uploads/2022/04/29/19/Kempff-8.jpg',
+        'https://www.la-razon.com/wp-content/uploads/2022/04/22/04/Diputados1.jpg',
         'https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2019/09/23103940/marcha-LGBT-Rio-de-Janeiro-1.jpg',
+        'https://www.la-razon.com/wp-content/uploads/2022/04/29/16/Marinkovi-ministro.jpg',
+        'https://th.bing.com/th/id/R.279c91748973055eb856d5d3244141bb?rik=iUuC3v8XnpXgoQ&pid=ImgRaw&r=0',
         'https://th.bing.com/th/id/OIP.lnp6IcVSLLI7Bk_Y4mUEDQHaEO?pid=ImgDet&rs=1'
       ],
     }
@@ -61,7 +66,9 @@ export default {
     Header,
     Carousel: Carousel,
     CarouselSlide: CarouselSlide,
-    Card
+    Card,
+    Info,
+    Media
   }
 }
 </script>

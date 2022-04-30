@@ -1,9 +1,9 @@
 <template>
     <div class="carousel"  @keydown="checkSlide($event)" tabindex="0">
         <slot></slot>
-        <button @click.prevent="next" class="btn btn-next"><i class="material-icons">Sig</i>
+        <button @click.prevent="next" class="btn btn-next"><i class="material-icons">&gt;</i>
 </button>
-        <button @click.prevent="prev" class="btn btn-prev"><i class="material-icons">Ant</i></button>
+        <button @click.prevent="prev" class="btn btn-prev"><i class="material-icons">&lt;</i></button>
     </div>
 </template>
 <script>

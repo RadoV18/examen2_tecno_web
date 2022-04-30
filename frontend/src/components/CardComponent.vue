@@ -15,7 +15,7 @@
       :src="require(`@/assets/img/${imageLink}`)"
     ></v-img>
 
-    <v-card-title>Cafe Badilico</v-card-title>
+    <v-card-title>{{title}}</v-card-title>
 
     <v-card-text>
       <v-row align="center" class="mx-0">
@@ -31,7 +31,7 @@
         <div class="grey--text ms-4">4.5 (413)</div>
       </v-row>
 
-      <div class="my-4 text-subtitle-1">• {{text}}</div>
+      <div class="my-4 text-subtitle-1">• {{title}}</div>
 
       <div>
         {{desc}}
@@ -61,8 +61,12 @@ export default {
     selection: 1
   }),
   props: {
+    title: String,
     imageLink: String,
-    text: String,
+    text: {
+      type: String,
+      default: ''
+    },
     desc: String,
   },
   methods: {

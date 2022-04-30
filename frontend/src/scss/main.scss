@@ -100,3 +100,16 @@
     background: $color-primary;
     color: $color-white;
 }
+
+header {
+    z-index: 9999 !important;
+}
+
+.carousel-slider img {
+    z-index: 1 !important;
+}
+
+.card__content {
+    margin-top: 1rem !important;
+    color: black !important;
+}

@@ -1,5 +1,5 @@
 <template>
-  <v-container >
+  <v-container class="on-top">
     <v-toolbar class="background-primary" flat>
       <v-toolbar-title class="text-white">
         <router-link class="text-white no-decoration header__title" to="/">

@@ -28,6 +28,7 @@
           size="16"
         ></v-rating>
       </v-row>
+      <p class="card__content">{{cardContent}}</p>
     </v-card-text>
 
 
@@ -49,6 +50,10 @@ export default {
   props: {
     imageLink: String,
     text: String,
+    cardContent: {
+      type: String,
+      default: ''
+    }
   },
 }
 </script>
