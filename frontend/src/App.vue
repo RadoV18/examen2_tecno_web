@@ -4,7 +4,7 @@
       <Header />
     </v-app-bar>
 
-    <router-view> </router-view>
+    <router-view></router-view>
 
     <v-footer class="no-padding background-secondary">
       <Footer />
